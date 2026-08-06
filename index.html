@@ -1,10 +1,186 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Togonelo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            font-family: 'Courier New', monospace;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 650px;
+            width: 100%;
+        }
+
+        .header {
+            border-left: 3px solid #00ff99;
+            padding-left: 16px;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.4rem;
+            color: #00ff99;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 6px;
+        }
+
+        .section {
+            margin-bottom: 36px;
+        }
+
+        .section-title {
+            font-size: 0.75rem;
+            color: #00ff99;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: #ccc;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            transition: border-color 0.2s;
+        }
+
+        .tag:hover {
+            border-color: #00ff99;
+            color: #00ff99;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 12px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #ccc;
+            font-size: 0.9rem;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .link:hover {
+            border-color: #00ff99;
+            color: #00ff99;
+        }
+
+        .link .arrow {
+            margin-left: auto;
+            color: #444;
+        }
+
+        .link:hover .arrow {
+            color: #00ff99;
+        }
+
+        .footer {
+            margin-top: 50px;
+            color: #444;
+            font-size: 0.75rem;
+            text-align: center;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1.2em;
+            background: #00ff99;
+            vertical-align: text-bottom;
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p>This is my website!</p>
+    <div class="container">
+        <div class="header">
+            <h1>Togonelo <span class="cursor"></span></h1>
+            <p>Emmett &mdash; Kansas, USA</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">// about</div>
+            <p style="color: #aaa; line-height: 1.7; font-size: 0.9rem;">
+                12 y/o homelab enthusiast, ham radio student, and tinkerer. 
+                I build stuff, break stuff, and occasionally fix stuff.
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">// interests</div>
+            <div class="tags">
+                <span class="tag">🔭 Ham Radio (Technician)</span>
+                <span class="tag">🖨️ 3D Printing</span>
+                <span class="tag">🐍 Python</span>
+                <span class="tag">🖥️ Homelab</span>
+                <span class="tag">⌨️ Mechanical Keyboards</span>
+                <span class="tag">🏃 Cross Country</span>
+                <span class="tag">🎮 Minecraft</span>
+                <span class="tag">📡 VoIP / Networking</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">// links</div>
+            <div class="links">
+                <a class="link" href="https://github.com/Togonelo" target="_blank">
+                    <span>⌥</span> GitHub &mdash; Togonelo
+                    <span class="arrow">→</span>
+                </a>
+                <a class="link" href="https://linktr.ee/eklist
+                    " target="_blank">
+                    <span>⌥</span> Linktree
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            togonelo.github.io &mdash; built with 0 budget and too much free time
+        </div>
+    </div>
 </body>
 </html>
